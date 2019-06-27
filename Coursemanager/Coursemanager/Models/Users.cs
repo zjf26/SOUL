@@ -12,7 +12,7 @@ namespace Coursemanager.Models
 
         [Required]
         [StringLength(20)]
-        [Display(Name="用户账号")]
+        [Display(Name="用户账号：")]
         public string Account { get; set; }
         [Required]
         [StringLength(20)]

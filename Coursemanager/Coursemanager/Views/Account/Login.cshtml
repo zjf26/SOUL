@@ -14,40 +14,45 @@
     @Scripts.Render("~/bundles/modernizr")
     <style>
         .login {
-
-            text-align:center;
+        padding:20px;
+        width:20%;
+        margin:0 auto;
         }
+     .login   p {
+         padding:10px;
+         text-align:center;
+         }
     </style>
 </head>
 <body>
-    <div class="login">
-    <h2>登录</h2>
+
     @using (Html.BeginForm())
     {
         @Html.ValidationSummary(true)
-     
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Account)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Account)
-            @Html.ValidationMessageFor(model => model.Account)
-        </div>
+        <div class="login">
+            <h4>登录</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Account)
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Passwoed)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Passwoed)
-            @Html.ValidationMessageFor(model => model.Passwoed)
-        </div>
+                @Html.EditorFor(model => model.Account)
+                @Html.ValidationMessageFor(model => model.Account)
+            </div>
 
-        <p>
-            <input type="submit" value="登录" />
-        </p>
- 
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Passwoed)
+
+                @Html.EditorFor(model => model.Passwoed)
+                @Html.ValidationMessageFor(model => model.Passwoed)
+            </div>
+
+            <p>
+                <input type="submit" value="登录" />
+            </p>
+        </div>
     }
-        </div>
+
     @section Scripts {
         @Scripts.Render("~/bundles/jqueryval")
     }
