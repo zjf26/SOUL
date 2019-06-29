@@ -24,6 +24,12 @@ namespace Coursemanager.Controllers
         {
             return View();
         }
+
+        public ActionResult register()
+        {
+            return View();
+        }
+
         [HttpPost]
 
         public ActionResult Login(LoginInput input)
@@ -34,7 +40,7 @@ namespace Coursemanager.Controllers
 
                 if(account == null)
                 {
-                    ModelState.AddModelError("Passwoed","用户名不存在或密码错误");
+                    ModelState.AddModelError("Password","用户名不存在或密码错误");
 
                     return View(input);
                 }
@@ -48,6 +54,33 @@ namespace Coursemanager.Controllers
                 Response.Cookies.Add(cookie);
 
                 return RedirectToAction("Index","Home");
+            }
+            return View(input);
+        }
+        [HttpPost]
+
+        public ActionResult register(LoginInput input)
+        {
+            if (ModelState.IsValid)
+            {
+                var account = db.Users.FirstOrDefault(u => u.Account == input.Account && u.Passwoed == input.Passwoed);
+
+                if (account == null)
+                {
+                    ModelState.AddModelError("Password", "用户名不存在或密码错误");
+
+                    return View(input);
+                }
+
+                HttpContext.Session.Add("user", input.Account);
+
+                var cookie = new HttpCookie("user", input.Account)
+                {
+                    Expires = DateTime.Now.AddHours(3)
+                };
+                Response.Cookies.Add(cookie);
+
+                return RedirectToAction("Login", "Account");
             }
             return View(input);
         }

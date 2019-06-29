@@ -18,8 +18,11 @@ namespace Coursemanager.Models
         [Key]
         [Required]
         public int Id { get; set; }
+        [Display(Name = "班级名称")]
         public int ClassId { get; set; }
+        [Display(Name = "课程名称")]
         public int CourseId { get; set; }
+        [Display(Name = "教师名称")]
         public int TeacherId { get; set; }
     }
 }
