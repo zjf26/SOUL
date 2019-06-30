@@ -11,7 +11,7 @@ namespace Coursemanager.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201912110938056_creat"; }
+            get { return "201906300657232_creat"; }
         }
         
         string IMigrationMetadata.Source

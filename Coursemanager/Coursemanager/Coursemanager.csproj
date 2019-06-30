@@ -175,16 +175,15 @@
     <Compile Include="Controllers\SidebarsController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TeachersController.cs" />
+    <Compile Include="Filters\ActionResultExceptionFilterAttribute.cs" />
+    <Compile Include="Filters\RequireAuthenticationAttribute.cs" />
+    <Compile Include="Filters\UnauthorizedException.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201912110938056_creat.cs" />
-    <Compile Include="Migrations\201912110938056_creat.Designer.cs">
-      <DependentUpon>201912110938056_creat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201912161151107_creat201912161951.cs" />
-    <Compile Include="Migrations\201912161151107_creat201912161951.Designer.cs">
-      <DependentUpon>201912161151107_creat201912161951.cs</DependentUpon>
+    <Compile Include="Migrations\201906300657232_creat.cs" />
+    <Compile Include="Migrations\201906300657232_creat.Designer.cs">
+      <DependentUpon>201906300657232_creat.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\Seeds\ActionLinkCreator.cs" />
@@ -200,11 +199,11 @@
     <Compile Include="Models\Classse.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\ClassseExitention.cs" />
+    <Compile Include="Models\ClassseExtention.cs" />
     <Compile Include="Models\Course.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\courseExitention.cs" />
+    <Compile Include="Models\courseExtention.cs" />
     <Compile Include="Models\CourseManagement.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -216,6 +215,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\Users.cs" />
+    <Compile Include="Models\ValidatableObjects\EncryptExtentions.cs" />
+    <Compile Include="Models\ValidatableObjects\LoginInput.cs" />
     <Compile Include="Models\Websiteinfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -384,7 +385,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Filters\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -393,11 +393,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201912110938056_creat.resx">
-      <DependentUpon>201912110938056_creat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201912161151107_creat201912161951.resx">
-      <DependentUpon>201912161151107_creat201912161951.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201906300657232_creat.resx">
+      <DependentUpon>201906300657232_creat.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

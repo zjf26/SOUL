@@ -78,10 +78,22 @@ namespace Coursemanager.Migrations
                     })
                 .PrimaryKey(t => t.Id);
             
+            CreateTable(
+                "dbo.Users",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Account = c.String(nullable: false, maxLength: 20),
+                        UserName = c.String(nullable: false, maxLength: 20),
+                        Passwoed = c.String(nullable: false, maxLength: 255),
+                    })
+                .PrimaryKey(t => t.Id);
+            
         }
         
         public override void Down()
         {
+            DropTable("dbo.Users");
             DropTable("dbo.Sidebars");
             DropTable("dbo.ActionLinks");
             DropTable("dbo.CourseManagements");
