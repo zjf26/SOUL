@@ -41,7 +41,7 @@ namespace Coursemanager.Controllers
 
             HttpContext.Session.Add("user",input.Account);
 
-            var cookie = new HttpCookie("user", input.Account.EncryptQueryString())
+            var cookie = new HttpCookie("user", input.Account)
                 {
                   Expires = DateTime.Now.AddHours(3)
                 };

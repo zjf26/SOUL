@@ -26,7 +26,7 @@ namespace Coursemanager.Filters
                 {
                     throw new UnauthorizedException();
                 }
-                var content = cookie.Value.DecryptQueryString();
+                var content = cookie.Value;
                 CoursemanagerEntities db = new CoursemanagerEntities();
                 if (!db.Users.Any(u => u.Account == content))
                 {
