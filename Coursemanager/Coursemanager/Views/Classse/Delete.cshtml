@@ -1,0 +1,39 @@
+﻿@model Coursemanager.Models.Classse
+@using Coursemanager.Models
+@{
+    ViewBag.Title = "Delete";
+    var teachers = (List<Teachers>)ViewBag.Teachers;
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Classse</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TeacherId)
+    </div>
+    <div class="display-field">
+        <select name="TeacherId" class="from-contrl" >
+                @foreach (var teacher in teachers)
+                { 
+                <option value="@teacher.Id">@teacher.Name</option>
+                }
+
+            </select>
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
