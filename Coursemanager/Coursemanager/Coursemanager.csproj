@@ -168,20 +168,20 @@
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\CourseManagementController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SidebarsController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TeachersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201911270901598_Create20191127.cs" />
-    <Compile Include="Migrations\201911270901598_Create20191127.Designer.cs">
-      <DependentUpon>201911270901598_Create20191127.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201912041229324_actionlink1912042026.cs" />
-    <Compile Include="Migrations\201912041229324_actionlink1912042026.Designer.cs">
-      <DependentUpon>201912041229324_actionlink1912042026.cs</DependentUpon>
+    <Compile Include="Migrations\201912110938056_creat.cs" />
+    <Compile Include="Migrations\201912110938056_creat.Designer.cs">
+      <DependentUpon>201912110938056_creat.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\Seeds\ActionLinkCreator.cs" />
+    <Compile Include="Migrations\Seeds\ClassesCreator.cs" />
+    <Compile Include="Migrations\Seeds\SidebarCreator.cs" />
     <Compile Include="Models\ActionLink.cs" />
     <Compile Include="Models\Classse.Context.cs">
       <SubType>Code</SubType>
@@ -199,7 +199,7 @@
     <Compile Include="Models\CourseManagement.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\key.cs" />
+    <Compile Include="Models\Sidebar.cs" />
     <Compile Include="Models\Stutents.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -358,6 +358,12 @@
     <Content Include="Views\Actionlink\Create.cshtml" />
     <Content Include="Views\Actionlink\Edit.cshtml" />
     <Content Include="Views\Actionlink\Delete.cshtml" />
+    <Content Include="Views\Sidebars\Index.cshtml" />
+    <Content Include="Views\Sidebars\Details.cshtml" />
+    <Content Include="Views\Sidebars\Create.cshtml" />
+    <Content Include="Views\Sidebars\Edit.cshtml" />
+    <Content Include="Views\Sidebars\Delete.cshtml" />
+    <Content Include="Views\Shared\sidebar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -370,11 +376,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201911270901598_Create20191127.resx">
-      <DependentUpon>201911270901598_Create20191127.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201912041229324_actionlink1912042026.resx">
-      <DependentUpon>201912041229324_actionlink1912042026.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201912110938056_creat.resx">
+      <DependentUpon>201912110938056_creat.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

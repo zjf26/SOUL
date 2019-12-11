@@ -8,7 +8,7 @@ namespace Coursemanager.Models
 {
     public partial class ActionLink
     {
-        [key]
+        [Key]
         [Required]
         public int Id { get; set; }
 
@@ -19,4 +19,5 @@ namespace Coursemanager.Models
         public string Action { get; set; }
 
     }
+
 }

@@ -15,7 +15,7 @@ namespace Coursemanager.Models
     
     public partial class Teachers
     {
-        [key]
+        [Key]
         [Required]
         public int Id { get; set; }
         [StringLength(20)]

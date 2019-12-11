@@ -15,7 +15,7 @@ namespace Coursemanager.Models
     
     public partial class Classse
     {
-        [key]
+        [Key]
         [Required]
         public int Id { get; set; }
 

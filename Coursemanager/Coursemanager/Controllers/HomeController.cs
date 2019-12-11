@@ -9,6 +9,8 @@ namespace Coursemanager.Controllers
 {
     public class HomeController : Controller
     {
+        private CoursemanagerEntities db = new CoursemanagerEntities();
+
         public ActionResult Index()
         {
 
@@ -34,7 +36,16 @@ namespace Coursemanager.Controllers
         {
             var Site = new Websiteinfo();
             ViewBag.Site = Site;
+            Site.ActionLinks = db.ActionLink.ToList();
             return PartialView("~/Views/Shared/Navbar.cshtml");
+        }
+        [ChildActionOnly]
+
+        public ActionResult Sidebar()
+        {
+            var sidebars = db.Sidebar.ToList();
+            ViewBag.Sidebar = sidebars;
+            return PartialView("~/Views/Shared/sidebar.cshtml");
         }
     }
 }
