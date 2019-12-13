@@ -11,6 +11,5 @@ namespace Coursemanager.BLLS
         public string CourseName { get; set; }
         public string TeacherName { get; set; }
 
-        public TValue Name { get; set; }
     }
 }
