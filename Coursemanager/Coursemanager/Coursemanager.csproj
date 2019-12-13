@@ -163,6 +163,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="BLLS\ClassRepository.cs" />
+    <Compile Include="BLLS\CourseDetail.cs" />
+    <Compile Include="BLLS\IClassRepository.cs" />
     <Compile Include="Controllers\ActionlinkController.cs" />
     <Compile Include="Controllers\ClassseController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
@@ -364,6 +367,7 @@
     <Content Include="Views\Sidebars\Edit.cshtml" />
     <Content Include="Views\Sidebars\Delete.cshtml" />
     <Content Include="Views\Shared\sidebar.cshtml" />
+    <Content Include="Views\Classse\ShowCourseMnanagement.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

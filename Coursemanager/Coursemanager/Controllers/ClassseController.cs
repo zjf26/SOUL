@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Coursemanager.Models;
+using Coursemanager.BLLS;
 
 namespace Coursemanager.Controllers
 {
@@ -13,6 +14,7 @@ namespace Coursemanager.Controllers
     {
         private CoursemanagerEntities db = new CoursemanagerEntities();
 
+        private IClassRepository _respository = new ClassRepository();
         //
         // GET: /Classse/
 
@@ -119,6 +121,12 @@ namespace Coursemanager.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult ShowCourseMnanagement(int id)
+        {
+            return View(_respository.GetClassCourse(id));
+        }
+
 
         protected override void Dispose(bool disposing)
         {
