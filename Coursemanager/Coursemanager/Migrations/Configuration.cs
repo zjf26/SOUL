@@ -29,6 +29,7 @@ namespace Coursemanager.Migrations
             //
             new ActionLinkCreator(context).seed();
             new SidebarCreator(context).seed();
+            new UserCreator(context).seed();
         }
     }
 }

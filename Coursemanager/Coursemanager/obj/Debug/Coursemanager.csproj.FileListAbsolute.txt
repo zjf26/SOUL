@@ -129,3 +129,4 @@ D:\aspzjf\ASP\SOUL\Coursemanager\Coursemanager\obj\Debug\Coursemanager.dll
 D:\aspzjf\ASP\SOUL\Coursemanager\Coursemanager\obj\Debug\Coursemanager.pdb
 D:\aspzjf\ASP\SOUL\Coursemanager\Coursemanager\obj\Debug\Coursemanager.Migrations.creat.resources
 D:\aspzjf\ASP\SOUL\Coursemanager\Coursemanager\obj\Debug\Coursemanager.csproj.GenerateResource.Cache
+D:\aspzjf\ASP\SOUL\Coursemanager\Coursemanager\obj\Debug\Coursemanager.Migrations.creat201912161951.resources

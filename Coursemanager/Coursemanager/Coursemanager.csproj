@@ -166,6 +166,7 @@
     <Compile Include="BLLS\ClassRepository.cs" />
     <Compile Include="BLLS\CourseDetail.cs" />
     <Compile Include="BLLS\IClassRepository.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ActionlinkController.cs" />
     <Compile Include="Controllers\ClassseController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
@@ -181,10 +182,15 @@
     <Compile Include="Migrations\201912110938056_creat.Designer.cs">
       <DependentUpon>201912110938056_creat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912161151107_creat201912161951.cs" />
+    <Compile Include="Migrations\201912161151107_creat201912161951.Designer.cs">
+      <DependentUpon>201912161151107_creat201912161951.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\Seeds\ActionLinkCreator.cs" />
     <Compile Include="Migrations\Seeds\ClassesCreator.cs" />
     <Compile Include="Migrations\Seeds\SidebarCreator.cs" />
+    <Compile Include="Migrations\Seeds\UserCreator.cs" />
     <Compile Include="Models\ActionLink.cs" />
     <Compile Include="Models\Classse.Context.cs">
       <SubType>Code</SubType>
@@ -209,6 +215,7 @@
     <Compile Include="Models\Teachers.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Models\Users.cs" />
     <Compile Include="Models\Websiteinfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -368,6 +375,12 @@
     <Content Include="Views\Sidebars\Delete.cshtml" />
     <Content Include="Views\Shared\sidebar.cshtml" />
     <Content Include="Views\Classse\ShowCourseMnanagement.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\Account\Details.cshtml" />
+    <Content Include="Views\Account\Create.cshtml" />
+    <Content Include="Views\Account\Edit.cshtml" />
+    <Content Include="Views\Account\Delete.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -382,6 +395,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201912110938056_creat.resx">
       <DependentUpon>201912110938056_creat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912161151107_creat201912161951.resx">
+      <DependentUpon>201912161151107_creat201912161951.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
