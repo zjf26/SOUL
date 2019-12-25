@@ -1,5 +1,6 @@
 namespace Coursemanager.Migrations
 {
+    using Coursemanager.Migrations.Seeds;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -26,6 +27,9 @@ namespace Coursemanager.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+            new ActionLinkCreator(context).seed();
+            new SidebarCreator(context).seed();
+            new UserCreator(context).seed();
         }
     }
 }

@@ -1,0 +1,63 @@
+﻿@model Coursemanager.Models.ValidatableObjects.LoginInput
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - 我的 ASP.NET MVC 应用程序</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        .login {
+        padding:20px;
+        width:18%;
+        margin:0 auto;
+        }
+     .login   p {
+       
+         text-align:center;
+         }
+    </style>
+</head>
+<body>
+
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        <div class="login">
+            <h4>登录</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Account)
+                </div>
+        <div class="editor-field">
+                @Html.EditorFor(model => model.Account)
+                @Html.ValidationMessageFor(model => model.Account)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Passwoed)
+                </div>
+        <div class="editor-field">
+                @Html.EditorFor(model => model.Passwoed)
+                @Html.ValidationMessageFor(model => model.Passwoed)
+            </div>
+            <hr/>
+            <p>
+                <input type="submit" value="登录" />
+            </p>
+        </div>
+    }
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+</body>
+</html>

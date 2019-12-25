@@ -1,4 +1,5 @@
-﻿using Coursemanager.Models;
+﻿using Coursemanager.Filters;
+using Coursemanager.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +8,13 @@ using System.Web.Mvc;
 
 namespace Coursemanager.Controllers
 {
+    [RequireAuthentication]
+    [ActionResultExceptionFilter]
+
     public class HomeController : Controller
     {
+        private CoursemanagerEntities db = new CoursemanagerEntities();
+
         public ActionResult Index()
         {
 
@@ -34,7 +40,16 @@ namespace Coursemanager.Controllers
         {
             var Site = new Websiteinfo();
             ViewBag.Site = Site;
+            Site.ActionLinks = db.ActionLink.ToList();
             return PartialView("~/Views/Shared/Navbar.cshtml");
+        }
+        [ChildActionOnly]
+
+        public ActionResult Sidebar()
+        {
+            var sidebars = db.Sidebar.ToList();
+            ViewBag.Sidebar = sidebars;
+            return PartialView("~/Views/Shared/sidebar.cshtml");
         }
     }
 }
